@@ -643,8 +643,7 @@ INSERT OR IGNORE INTO tags (name, slug, color) VALUES
 ('设计模式', 'design-patterns', '#EC4899'),
 ('性能优化', 'performance', '#14B8A6');
 
-INSERT OR IGNORE INTO users (username, email, password_hash, display_name, role, status) VALUES
-('admin', 'admin@example.com', '$2a$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewY5GyYqRWNXb6tO', 'Administrator', 'admin', 'active');
+-- No preset login accounts. Site owners promote their own user in D1.
 
 INSERT OR IGNORE INTO users (id, username, email, password_hash, display_name, bio, role, status, post_count, comment_count, created_at, updated_at) VALUES
 (0, 'system', 'system@internal.local', 'SYSTEM_USER_NO_PASSWORD_HASH', '系统', '系统自动通知账号，用于发送系统公告', 'admin', 'active', 0, 0, '2026-02-12 08:32:07', '2026-02-12 08:32:07');
