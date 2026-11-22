@@ -24,7 +24,7 @@
    - 更新版本号为 v1.3.1
    - 更新技术栈版本信息（React 18、Hono 4、Vite 6、Framer Motion 12）
    - 完善项目结构说明，新增路由文件列表
-   - 更新数据库迁移文件路径（schema-v1.1-base.sql、schema-v1.2-notification-messaging.sql）
+   - 更新数据库迁移文件路径（0001_base.sql、schema-v1.2-notification-messaging.sql）
    - 新增功能特性说明（软删除、魔数验证、通知设置等）
    - 完善功能模块列表
 
@@ -130,7 +130,7 @@
 
 项目使用两个 SQL 文件进行数据库初始化：
 
-1. **schema-v1.1-base.sql** - 基础数据库架构
+1. **0001_base.sql** - 基础数据库架构
    - users 表（用户信息）
    - posts 表（文章数据）
    - columns 表（专栏数据）

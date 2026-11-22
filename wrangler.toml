@@ -1,5 +1,6 @@
 name = "blog"
-main = "src/index.ts"
+main = "backend/src/index.ts"
+workers_dev = true
 compatibility_date = "2024-01-01"
 # 静态资源挂到同一 Worker 后，导航请求（浏览器深链）优先交给静态资源、
 # 不进入 Worker，避免 Hono 的 JSON 404 覆盖 SPA 的 index.html。
@@ -8,7 +9,8 @@ compatibility_flags = ["assets_navigation_prefers_asset_serving"]
 
 # 前端静态资源（Vite 产物），与 API 同域部署
 [assets]
-directory = "../frontend/dist"
+directory = "frontend/dist"
+run_worker_first = ["/api/*"]
 binding = "ASSETS"
 not_found_handling = "single-page-application"
 
@@ -17,12 +19,14 @@ not_found_handling = "single-page-application"
 [[d1_databases]]
 binding = "DB"
 database_name = "blog-db"
-database_id = "22c49df6-55f0-4c0c-a777-77bb301b7a73"
+# 部署按钮会将占位 ID 替换为部署者的数据库 ID。
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "database"
 
 # KV 缓存
 [[kv_namespaces]]
 binding = "CACHE"
-id = "873b75c68d5f43ed9aa3ad7851ef730e"
+id = "00000000000000000000000000000000"
 
 # R2 存储
 [[r2_buckets]]
@@ -56,8 +60,9 @@ crons = ["*/15 * * * *"]
 # 环境变量（公开的配置）
 [vars]
 ENVIRONMENT = "production"
-FRONTEND_URL = "https://www.lyccc.cc"
-STORAGE_PUBLIC_URL = "https://storage.www.lyccc.cc"
+# 可选：邮件中的链接使用 FRONTEND_URL；默认同域提供 R2 文件。
+# FRONTEND_URL = "https://blog.example.com"
+# STORAGE_PUBLIC_URL = "https://storage.example.com"
 
 # Secrets（需要通过命令行或Cloudflare Dashboard设置）
 # wrangler secret put JWT_SECRET

@@ -1,0 +1,2 @@
+# 生成独立的随机密钥，例如 openssl rand -hex 32。不要提交实际值。
+JWT_SECRET=

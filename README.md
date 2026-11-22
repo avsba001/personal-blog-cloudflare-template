@@ -1,9 +1,11 @@
 # Personal Blog
 
-一个基于 Cloudflare 全栈技术构建的现代化个人博客系统。
+基于 [Zoroaaa/personal-blog](https://github.com/Zoroaaa/personal-blog) 的 Cloudflare 一键部署模板。
+
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/avsba001/personal-blog-cloudflare-template)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-1.4.0-green.svg)](https://github.com/yourusername/personal-blog)
+[![Version](https://img.shields.io/badge/version-1.4.0-green.svg)](https://github.com/avsba001/personal-blog-cloudflare-template)
 [![Cloudflare](https://img.shields.io/badge/Cloudflare-Workers-orange.svg)](https://workers.cloudflare.com/)
 [![zread](https://img.shields.io/badge/Ask_Zread-_.svg?style=flat&color=00b0aa&labelColor=000000&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTQuOTYxNTYgMS42MDAxSDIuMjQxNTZDMS44ODgxIDEuNjAwMSAxLjYwMTU2IDEuODg2NjQgMS42MDE1NiAyLjI0MDFWNC45NjAxQzEuNjAxNTYgNS4zMTM1NiAxLjg4ODEgNS42MDAxIDIuMjQxNTYgNS42MDAxSDQuOTYxNTZDNS4zMTUwMiA1LjYwMDEgNS42MDE1NiA1LjMxMzU2IDUuNjAxNTYgNC45NjAxVjIuMjQwMUM1LjYwMTU2IDEuODg2NjQgNS4zMTUwMiAxLjYwMDEgNC45NjE1NiAxLjYwMDFaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00Ljk2MTU2IDEwLjM5OTlIMi4yNDE1NkMxLjg4ODEgMTAuMzk5OSAxLjYwMTU2IDEwLjY4NjQgMS42MDE1NiAxMS4wMzk5VjEzLjc1OTlDMS42MDE1NiAxNC4xMTM0IDEuODg4MSAxNC4zOTk5IDIuMjQxNTYgMTQuMzk5OUg0Ljk2MTU2QzUuMzE1MDIgMTQuMzk5OSA1LjYwMTU2IDE0LjExMzQgNS42MDE1NiAxMy43NTk5VjExLjAzOTlDNS42MDE1NiAxMC42ODY0IDUuMzE1MDIgMTAuMzk5OSA0Ljk2MTU2IDEwLjM5OTlaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik0xMy43NTg0IDEuNjAwMUgxMS4wMzg0QzEwLjY4NSAxLjYwMDEgMTAuMzk4NCAxLjg4NjY0IDEwLjM5ODQgMi4yNDAxVjQuOTYwMUMxMC4zOTg0IDUuMzEzNTYgMTAuNjg1IDUuNjAwMSAxMS4wMzg0IDUuNjAwMUgxMy43NTg0QzE0LjExMTkgNS42MDAxIDE0LjM5ODQgNS4zMTM1NiAxNC4zOTg0IDQuOTYwMVYyLjI0MDFDMTQuMzk4NCAxLjg4NjY0IDE0LjExMTkgMS42MDAxIDEzLjc1ODQgMS42MDAxWiIgZmlsbD0iI2ZmZiIvPgo8cGF0aCBkPSJNNCAxMkwxMiA0TDQgMTJaIiBmaWxsPSIjZmZmIi8%2BCjxwYXRoIGQ9Ik00IDEyTDEyIDQiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K&logoColor=ffffff)](https://zread.ai/Zoroaaa/personal-blog)
 
@@ -16,7 +18,7 @@
 | 资源类型 | 链接 | 备注 |
 |---------|------|------|
 | 📖 项目文档 | 👉 [完整介绍](https://zread.ai/Zoroaaa/personal-blog) | 详细的项目说明和使用指南 |
-| 🚀 在线体验 | 👉 [https://blog.wort.uk](https://blog.wort.uk) | 体验完整功能 |
+| 🚀 上游演示 | 👉 [https://blog.wort.uk](https://blog.wort.uk) | 体验完整功能 |
 
 </div>
 
@@ -89,64 +91,7 @@
 
 ## 快速开始
 
-### 环境要求
-
-- Node.js 20+
-- pnpm 8+ 或 npm 9+
-- Cloudflare 账号
-
-### 安装步骤
-
-1. **克隆项目**
-   ```bash
-   git clone https://github.com/yourusername/personal-blog.git
-   cd personal-blog
-   ```
-
-2. **安装依赖**
-   ```bash
-   # 安装后端依赖
-   cd backend && pnpm install
-   
-   # 安装前端依赖
-   cd ../frontend && pnpm install
-   ```
-
-3. **配置环境变量**
-   ```bash
-   cp backend/.env.example backend/.env
-   cp frontend/.env.example frontend/.env
-   ```
-   根据 `.env.example` 中的说明填写必要配置。
-
-4. **创建数据库**
-   ```bash
-   cd backend
-   wrangler d1 create personal-blog-dev
-   
-   # 执行数据库迁移（按顺序执行）
-   wrangler d1 execute personal-blog-dev --file=../database/schema-v1.1-base.sql
-   wrangler d1 execute personal-blog-dev --file=../database/schema-v1.3-notification-messaging.sql
-   wrangler d1 execute personal-blog-dev --file=../database/schema-v1.4-refresh-tokens.sql
-   ```
-
-5. **创建 R2 存储桶**
-   ```bash
-   wrangler r2 bucket create personal-blog-images-dev
-   ```
-
-6. **启动开发服务器**
-   ```bash
-   # 启动后端（端口 8787）
-   cd backend && pnpm dev
-   
-   # 启动前端（端口 5173）
-   cd frontend && pnpm dev
-   ```
-
-详细配置请参考 [docs/QUICKSTART.md](./docs/QUICKSTART.md)。
-
----
+本地运行请参阅 [本地开发指南](./docs/QUICKSTART.md)。
 
 ## 项目结构
 
@@ -200,9 +145,9 @@ personal-blog/
 │   ├── tsconfig.json
 │   └── wrangler.toml       # Workers 配置
 ├── database/               # 数据库文件
-│   ├── schema-v1.1-base.sql          # 基础数据库架构
-│   ├── schema-v1.3-notification-messaging.sql # 通知私信架构
-│   └── schema-v1.4-refresh-tokens.sql # Refresh Token 支持
+│   ├── 0001_base.sql          # 基础数据库架构
+│   ├── 0002_notification_messaging.sql # 通知私信架构
+│   └── 0003_refresh_tokens.sql # Refresh Token 支持
 ├── frontend/               # 前端应用 (64个TypeScript文件)
 │   ├── src/
 │   │   ├── pages/          # 页面组件
@@ -383,33 +328,11 @@ personal-blog/
 
 ## 部署
 
-本项目支持一键部署到 Cloudflare 平台。
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/avsba001/personal-blog-cloudflare-template)
 
-### 部署架构
+登录 Cloudflare 和 GitHub，选好资源名，填写随机 `JWT_SECRET`，然后确认部署。Cloudflare 自动创建并绑定 D1、KV、R2，构建前端，并在发布 Worker 前应用数据库迁移。
 
-- **运行时**: 单个 Cloudflare Worker（`blog`）
-- **前端**: Worker 静态资源（`frontend/dist`，与 API 同域）
-- **后端 API**: 同一 Worker，路径 `/api/*`
-- **数据库**: Cloudflare D1
-- **缓存**: Cloudflare KV
-- **存储**: Cloudflare R2
-- **邮件**: Resend
-- **部署**: Workers Builds（构建前端后与 Worker 一起上传），push 不自动部署，只由 GitHub Actions 调用部署钩子触发
-- **流水线**: GitHub Actions 先 typecheck、再迁移生产 D1，成功后触发部署钩子；任何一步失败都不部署
-
-详细部署步骤请参考 [docs/DEPLOYMENT.md](./docs/DEPLOYMENT.md)。
-
-### 快速部署
-
-```bash
-# 本地手动部署：先构建前端，再连同 Worker 与静态资源一起上传
-npm run deploy
-
-# 生产库迁移
-npm run migrate -- blog-db --remote
-```
-
----
+部署完成后可直接打开 `workers.dev` 地址；管理账号需要注册后在 D1 控制台提权。详见[部署指南](./docs/DEPLOYMENT.md)。
 
 ## 系统要求
 

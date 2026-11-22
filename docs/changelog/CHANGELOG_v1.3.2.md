@@ -21,15 +21,15 @@
 本次更新对数据库架构进行了重要调整：
 
 1. **新增迁移文件**:
-   - `schema-v1.3-notification-messaging.sql` - 替代原有的 v1.2 版本
+   - `0002_notification_messaging.sql` - 替代原有的 v1.2 版本
    - `migration-v1.3-notification-cleanup.sql` - 通知系统清理迁移
    - `migration-v1.3-remove-password-field.sql` - 密码字段迁移
 
 2. **执行顺序**:
    ```bash
    # 按顺序执行
-   wrangler d1 execute personal-blog-db --file=./database/schema-v1.1-base.sql
-   wrangler d1 execute personal-blog-db --file=./database/schema-v1.3-notification-messaging.sql
+   wrangler d1 execute personal-blog-db --file=./database/0001_base.sql
+   wrangler d1 execute personal-blog-db --file=./database/0002_notification_messaging.sql
    ```
 
 ### 表结构变更
@@ -298,8 +298,8 @@ ORDER BY m.created_at DESC;
 3. **执行数据库迁移**（如果是全新部署）:
    ```bash
    cd backend
-   wrangler d1 execute personal-blog-db --file=./database/schema-v1.1-base.sql
-   wrangler d1 execute personal-blog-db --file=./database/schema-v1.3-notification-messaging.sql
+   wrangler d1 execute personal-blog-db --file=./database/0001_base.sql
+   wrangler d1 execute personal-blog-db --file=./database/0002_notification_messaging.sql
    ```
 
 4. **如果是升级现有数据库**:

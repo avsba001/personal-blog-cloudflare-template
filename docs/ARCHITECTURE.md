@@ -445,8 +445,8 @@ CREATE INDEX idx_users_github_id ON users(github_id);
 
 | 版本 | 迁移文件 | 变更内容 |
 |------|---------|---------|
-| v1.1 | schema-v1.1-base.sql | 基础表结构 |
-| v1.3 | schema-v1.3-notification-messaging.sql | 通知和私信系统 |
+| v1.1 | 0001_base.sql | 基础表结构 |
+| v1.3 | 0002_notification_messaging.sql | 通知和私信系统 |
 | v1.4 | migration-v1.4-message-recall.sql | 消息撤回功能 |
 | v1.9 | migration-v1.9-post-pinning.sql | 文章置顶功能 |
 

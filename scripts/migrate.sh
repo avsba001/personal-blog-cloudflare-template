@@ -29,7 +29,7 @@ fi
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 DB_DIR="$ROOT_DIR/database"
-WRANGLER_CONFIG="$ROOT_DIR/backend/wrangler.toml"
+WRANGLER_CONFIG="$ROOT_DIR/wrangler.toml"
 
 if [ -n "$REMOTE_FLAG" ]; then
     TARGET="远程(生产)"
@@ -41,7 +41,7 @@ echo "🔄 运行数据库迁移 [$TARGET]..."
 echo "📦 目标数据库: $DB_NAME"
 
 # 顺序不可调换：v1.1 为基础表，v1.3 / v1.4 依赖其建好的表
-for f in schema-v1.1-base.sql schema-v1.3-notification-messaging.sql schema-v1.4-refresh-tokens.sql; do
+for f in 0001_base.sql 0002_notification_messaging.sql 0003_refresh_tokens.sql; do
     echo "📝 执行 $f ..."
     npx wrangler d1 execute "$DB_NAME" $REMOTE_FLAG --config "$WRANGLER_CONFIG" --file="$DB_DIR/$f" --yes
 done
